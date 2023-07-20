@@ -14,7 +14,8 @@ def roman_to_int(roman_string):
     for n in range(len(roman_string)):
         if romans.get(roman_string[n], 0) == 0:
             return (0)
-        elif (n != (len(roman_string) - 1) and romans[roman_string[n]] < romans[roman_string[n + 1]]):
+        elif (n != (len(roman_string) - 1) and
+        romans[roman_string[n]] < romans[roman_string[n + 1]]):
             result += romans[roman_string[n]] * - 1
         else:
             result += romans[roman_string[n]]
