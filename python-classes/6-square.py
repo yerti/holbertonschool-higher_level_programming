@@ -6,7 +6,7 @@ class Square:
     """Defines class and instantiates private"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
-        self.__position = position
+        self.position = position
 
     """Getter that accesses private values"""
     @property
