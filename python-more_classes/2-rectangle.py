@@ -7,7 +7,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-    
+
     """Getter that accesses private values"""
     @property
     def width(self):
@@ -37,4 +37,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        return self.__width + self.__height + self.__width + self.__height
+        if self.__width and self.__height != 0:
+            return self.__width + self.__height + self.__width + self.__height
+        else:
+            return 0
