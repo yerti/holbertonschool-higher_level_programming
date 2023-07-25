@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+    """class that defines a rectangle"""
     number_of_instances = 0
 
     """Defines class and instanties private"""
