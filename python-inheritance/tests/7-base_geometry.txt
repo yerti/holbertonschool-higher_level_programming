@@ -1,0 +1,69 @@
+The ``7-base_geometry.py``
+============================================
+
+Using ``BaseGeometry``
+____________________________________________
+
+Import function from the module
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+____________________________________________
+
+Test case: method area
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    	      ...
+    Exception: area() is not implemented
+____________________________________________
+
+They pass us a string in value:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("age", "4")
+	Traceback (most recent call last):
+		...
+	[TypeError] age must be an integer
+
+____________________________________________
+
+They pass us a None in value:
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("name", None)
+	Traceback (most recent call last):
+		...
+	[TypeError] name must be an integer
+____________________________________________
+
+They pass us a list in value:
+	>>> bg =  BaseGeomtry()
+	>>> bg.integer_validator("name", [2])
+	Traceback (most recent call last):
+		...
+	[TypeError] name must be an integer
+
+______________________________________________
+
+They pass us a bool in value:
+	>>> bg = BaseGeometry
+	>>> bg.integer_validator("name", True)
+	Traceback (most recent call last):
+		...
+	[TypeError] name must be an integer
+
+_______________________________________________
+
+They pass us 0 as value:
+	>>> bg = BaseGeometry
+        >>> bg.integer_validator("name", 0)
+        Traceback (most recent call last):
+                ...
+        [ValueError] name must be greater than 0
+
+_________________________________________________
+
+They pass us negative number:
+        >>> bg = BaseGeometry
+        >>> bg.integer_validator("name", -8)
+        Traceback (most recent call last):
+                ...
+        [ValueError] name must be greater than 0
