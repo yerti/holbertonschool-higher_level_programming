@@ -6,5 +6,5 @@ def read_file(filename=""):
     """giving read permissions"""
 
     with open(filename, 'r', encoding='utf-8') as file:
-        for line in line:
+        for line in file:
             print(line, end='')
