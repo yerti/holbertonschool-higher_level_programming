@@ -1,0 +1,56 @@
+The ``2-matrix_divided`` module
+===============================
+
+Using ``matrix_divided``
+________________________
+
+Importing function from the module 
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Dividing a matrix by 3:
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Dividing an array with 0:
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+	Traceback (most recent call last):
+		...
+	ZeroDivisionError: division by zero
+
+Do not pass any number in the matrix:
+
+	>>> matrix_divided([], 3)
+	Traceback (most recen call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Splitting an array of a different size:
+
+	>>> matrix_divided([[1, 2], [3, 4, 5], [6]], 3)
+	Traceback (most recent call last):
+		...
+	TypeError: Each row of the matrix must have the same size
+
+When we are passed string in array:
+
+	>>> matrix_divided([["Maria", "Jose"], ["Pepe", "Rony"]], 3)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing an empty array list and the rest if the same size:
+
+	>>> matrix_divided([[1, 2], [3, 4], []], 3)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+passing div as a string:
+
+	>>> matrix_divided([[10, 20], [30, 40]], "3")
+	Traceback (most recent call last):
+		...
+	TypeError: div must be a number
